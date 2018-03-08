@@ -10,6 +10,8 @@ RUN apt-get -y install python3-pip
 ENV PYTHON /usr/bin/python3
 RUN git clone --recursive https://github.com/bambocher/pocketsphinx-python
 WORKDIR ./pocketsphinx-python
+RUN rm README.rst
+RUN touch README.rst
 RUN python3 setup.py build
 RUN python3 setup.py install
 RUN pip3 install SpeechRecognition
