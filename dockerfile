@@ -21,7 +21,7 @@ RUN ./configure
 RUN make
 RUN make install
 RUN pip3 install SpeechRecognition
-WORKDIR ..
+WORKDIR /azure-iot-sdk-python/device/samples
 COPY *.py ./ 
 RUN  apt-get install -y portaudio19-dev
 RUN pip3 install pyaudio
