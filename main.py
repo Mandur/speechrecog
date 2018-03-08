@@ -29,10 +29,10 @@ def main():
                     json_formatted = json.dumps({"text":r.recognize_sphinx(audio)})
                     sender.send_event_to_output(json_formatted, msg_properties, detection_index)
                     print("Sphinx thinks you said " + r.recognize_sphinx(audio))
-                    except sr.UnknownValueError:
-                        print("Sphinx could not understand audio")
-                    except sr.RequestError as e:
-                        print("Sphinx error; {0}".format(e))
+            except sr.UnknownValueError:
+                print("Sphinx could not understand audio")
+            except sr.RequestError as e:
+                print("Sphinx error; {0}".format(e))
 
 
 main()
