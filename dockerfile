@@ -20,6 +20,8 @@ WORKDIR ../pocketsphinx-5prealpha
 RUN ./configure
 RUN make
 RUN make install
+RUN cp -a /usr/local/lib/python3.5/site-packages/sphinxbase/. /usr/lib/python3.5
+RUN cp -a /usr/local/lib/python3.5/site-packages/pocketsphinx/. /usr/lib/python3.5
 RUN pip3 install SpeechRecognition
 WORKDIR /azure-iot-sdk-python/device/samples
 COPY *.py ./ 
