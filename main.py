@@ -1,4 +1,5 @@
 from sender import Sender
+import os
 
 import sys
 sys.path.append('/usr/local/lib/python3.5/site-packages/sphinxbase')
