@@ -9,7 +9,7 @@ COPY aliases.txt /lib/modprobe.d/aliases.conf
 RUN apt-get -y install python3-pip
 ENV PYTHON /usr/bin/python3
 RUN git clone --recursive https://github.com/bambocher/pocketsphinx-python
-RUN cd pocketsphinx-python
+WORKDIR ./pocketsphinx-python
 RUN python3 setup.py build
 RUN python3 setup.py install
 RUN pip3 install SpeechRecognition
