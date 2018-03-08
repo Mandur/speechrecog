@@ -1,5 +1,11 @@
-import speech_recognition as sr
 from sender import Sender
+
+import sys
+sys.path.append('/usr/local/lib/python3.5/site-packages/sphinxbase')
+sys.path.append('/usr/local/lib/python3.5/site-packages/pocketsphinx')
+import pocketsphinx
+import speech_recognition as sr
+
 
 def main():
     CONNECTION_STRING = os.getenv('EdgeHubConnectionString')
