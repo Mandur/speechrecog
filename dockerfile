@@ -12,6 +12,7 @@ RUN git clone --recursive https://github.com/bambocher/pocketsphinx-python
 WORKDIR ./pocketsphinx-python
 RUN rm README.rst
 RUN touch README.rst
+RUN apt-get install -qq python python-dev python-pip build-essential swig git libpulse-dev
 RUN python3 setup.py build
 RUN python3 setup.py install
 RUN pip3 install SpeechRecognition
