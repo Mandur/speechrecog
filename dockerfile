@@ -20,4 +20,5 @@ WORKDIR /azure-iot-sdk-python/device/samples
 COPY *.py ./ 
 RUN  apt-get install -y portaudio19-dev
 RUN pip3 install pyaudio
+RUN apt-get install vim alsa-utils
 CMD /bin/bash
